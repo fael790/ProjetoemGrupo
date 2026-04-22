@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Byte Six</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TELA INICIAL -->
+<section id="inicio" class="tela ativa">
+  <div class="bg"></div>
+
+  <div class="conteudo">
+    <h1 class="logo">🎮 Byte Six</h1>
+    <p class="sub">O futuro dos jogos começa aqui</p>
+
+    <button class="btn-entrar" onclick="entrar()">
+      Entrar
+    </button>
+  </div>
+</section>
+
+<!-- TELA DE JOGOS -->
+<section id="app" class="tela">
+
+<header class="navbar">
+  <h1>🎮 Byte Six</h1>
+
+  <nav>
+    <button onclick="scrollToSection('home')">Início</button>
+    <button onclick="scrollToSection('games')">Jogos</button>
+    <button onclick="scrollToSection('categorias')">Categorias</button>
+  </nav>
+
+ 
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <span class="tag">JOGO EM DESTAQUE</span>
+    <h2>Free Fire</h2>
+    <p>Jogo mobile de sobrevivencia onde apenas um jogador vence a partida.</p>
+    <button onclick="jogar('Free Fire')">Jogar Agora</button>
+  </div>
+</section>
+
+<input type="text" id="pesquisa" placeholder="Pesquisar..." oninput="pesquisar()">
+ 
+<!-- CATEGORIAS -->
+<section id="categorias" class="cats">
+  <button class="active" onclick="filtrar('todos')">Todos</button>
+  <button onclick="filtrar('acao')">Ação</button>
+  <button onclick="filtrar('esportes')">Esportes</button>
+  <button onclick="filtrar('fps')">FPS</button>
+  <button onclick="filtrar('simulacao')">Simulação</button>
+</section>
+
+ 
+<!-- JOGOS -->
+<section id="games">
+  <h2> Jogos</h2>
+
+  <div class="grid">
+
+    <!-- 15 jogos -->
+
+    <div class="card" data-cat="fps">
+      <img src="fotos/callofduty.jpg">
+      <p>Call of Duty: Warzone</p>
+      <p>Combates intensos em mapas gigantes com jogadores do mundo todo.</p>
+      <button onclick="jogar('Call of Duty: Warzone')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="esportes">
+      <img src="fotos/fifa.jpg">
+      <p>EA Sports FC 26</p>
+      <p>Simulador de futebol com times reais e gráficos avançados.</p>
+      <button onclick="jogar('EA Sports FC 26')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="simulacao">
+      <img src="fotos/farming.jpg">
+      <p>Farming Simulator</p>
+      <p>Gerencie sua própria fazenda, cultive plantações e cuide dos animais.</p>
+      <button onclick="jogar('Farming Simulator')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="fps">
+      <img src="fotos/freefire.jpg">
+      <p>Free Fire</p>
+      <p>Jogo mobile de sobrevivência onde apenas um jogador vence a partida.</p>
+      <button onclick="jogar('Free Fire')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="fps">
+      <img src="fotos/fortnite.jpg">
+      <p>Fortnite</p>
+      <p>Jogo online com construção, eventos ao vivo e modos criativos.</p>
+      <button onclick="jogar('Fortnite')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="esportes">
+      <img src="fotos/faroza.jpg">
+      <p>Forza Horizon 5</p>
+      <p>Explore o México em corridas incríveis com gráficos realistas e mundo aberto.</p>
+      <button onclick="jogar('Forza Horizon 5')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="acao">
+      <img src="fotos/godofwar.jpg">
+      <p>God of War Ragnarok</p>
+      <p>Kratos e Atreus enfrentam deuses nórdicos em uma jornada épica.</p>
+      <button onclick="jogar('God of War Ragnarok')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="acao">
+      <img src="fotos/gta.jpg">
+      <p>GTA VI</p>
+      <p>O próximo grande lançamento da Rockstar com mundo aberto gigante e história imersiva.</p>
+      <button onclick="jogar('GTA VI')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="fps">
+      <img src="fotos/lol.jpg">
+      <p>League of Legends</p>
+      <p>Jogo competitivo de estratégia em equipe com campeões únicos.</p>
+      <button onclick="jogar('League of Legends')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="acao">
+      <img src="fotos/legobatman.jpg">
+      <p>Lego Batman</p>
+      <p>Jogo divertido baseado no universo LEGO com o Batman enfrentando vilões clássicos.</p>
+      <button onclick="jogar('Lego Batman')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="simulacao">
+      <img src="fotos/minecraft.jpg">
+      <p>Minecraft</p>
+      <p>Construa, explore e sobreviva em um mundo de blocos infinito.</p>
+      <button onclick="jogar('Minecraft')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="acao">
+      <img src="fotos/reddead.jpg">
+      <p>Red Dead Redemption 2</p>
+      <p>Viva como um fora da lei no Velho Oeste em uma história profunda e imersiva.</p>
+      <button onclick="jogar('Red Dead Redemption 2')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="simulacao">
+      <img src="fotos/reblox.jpg">
+      <p>Roblox</p>
+      <p>Plataforma com milhares de jogos criados pelos próprios jogadores.</p>
+      <button onclick="jogar('Roblox')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="acao">
+      <img src="fotos/thelastofus.jpg">
+      <p>The Last of Us</p>
+      <p>Uma jornada emocionante em um mundo pós-apocalíptico cheio de desafios.</p>
+      <button onclick="jogar('The Last of Us')">Jogar</button>
+    </div>
+
+    <div class="card" data-cat="fps">
+      <img src="fotos/valorant.jpg">
+      <p>Valorant</p>
+      <p>Jogo de tiro competitivo com habilidades especiais.</p>
+      <button onclick="jogar('Valorant')">Jogar</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL VIDEO -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharVideo()">✖</span>
+    <video id="videoPlayer" controls></video>
+  </div>
+</div>
+
+</section> <!--  FECHANDO O #app AQUI -->
+
+<script src="script.js"></script>
+</body>
+</html>
